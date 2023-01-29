@@ -8,23 +8,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b608772382.js" crossorigin="anonymous"></script>
 </head>
-
+s
 <body>
 
     <div id="header">
         <div class="container">
             <nav>
                 <img src="Images/logo.jpg" class="logo">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Contact</a></li>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li> 
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>   
+                    <i class="fa-solid fa-xmark scc" id="sc" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars scm" id="sc" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
+                <p>Web developer</p>
                 <h1>Hi I am <span>Raj</span> from India, <br> Currently studying in Ontario, Canada.</h1>
             </div>
         </div>
@@ -108,7 +111,7 @@
                     <i class="fa-solid fa-compass-drafting"></i>
                     <h2>Web design & development</h2>
                     <p>Havig knowledge & experience to create & <br> host web as per requirement.</p>
-                    <a href="">Know more</a>
+                    <a href="https://github.com/raj1310venus">Know more</a>
                 </div>
 
                 <div>
@@ -116,7 +119,7 @@
                     <h2>Microsoft PowerAppStudio.</h2>
                     <p>Havig knowledge & experience to create attractive <br> & useful applications
                         in Microsoft Power Platform <br> for organizational use.</p>
-                    <a href="">Know more</a>
+                    <a href="https://github.com/raj1310venus">Know more</a>
                 </div>
 
                 <div>
@@ -124,7 +127,7 @@
                     <h2>Power Automate.</h2>
                     <p>Having knowledge & experience to create <br> attended & un-attended
                         Robotic Process Automation(RPA) <br> by using Power Automate & Flow.</p>
-                    <a href="">Know more</a>
+                    <a href="https://github.com/raj1310venus">Know more</a>
                 </div>
 
                 
@@ -138,7 +141,7 @@
                     <h2>Power BI.</h2>
                     <p>Having knowledge & experience to create a <br> dashboard  which can help
                         organization/individual<br> to perform some analysis.</p>
-                    <a href="">Know more...</a>
+                    <a href="https://github.com/raj1310venus">Know more...</a>
                 </div>
 
                 <div>
@@ -147,7 +150,7 @@
                     <p>Managed SLA on time with respect <br> to Projects, reports from tableau and  <br>analyzing it.
                     Assist the project leader <br> to develop detailed work plans, schedules <br> and forecast, project estimates, resource plans <br>
                     and project status (tracking/reporting).</p>
-                    <a href="">Know more...</a>
+                    <a href="https://github.com/raj1310venus">Know more...</a>
                 </div>
 
                 <div>
@@ -155,7 +158,7 @@
                     <h2>Data Analytics.</h2>
                     <p>Having knowledge & experience to create a <br> Database  which can help
                         organization/individual,<br> where required query can be run <br>& can be used for analytical purpose.</p>
-                    <a href="">Know more...</a>
+                    <a href="https://github.com/raj1310venus">Know more...</a>
                 </div>
 
 
@@ -210,22 +213,23 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-regular fa-paper-plane"></i> abc@gmail.com</p>
-                    <p><i class="fa-solid fa-phone-volume"></i> 09876434567</p>
+                    <p><i class="fa-regular fa-paper-plane"></i> raj1310venus@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i> 6479363467</p>
                     <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=""><i class="fa-brands fa-stack-overflow"></i></a>
-                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href="www.linkedin.com/in/thakurrajkumar"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://stackoverflow.com/users/11954537/raj"><i class="fa-brands fa-stack-overflow"></i></a>
+                        <a href="https://github.com/raj1310venus"><i class="fa-brands fa-github"></i></a>
                     </div>
                     <a href="Images/CV_2023.pdf" download="CV_2023.pdf" target="_blank" class="btn btn2"> Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder=" Please enter your name" required>
-                        <input type="email" name="email" placeholder="Please enter your email id" required>
+                        <input type="email" name="Email" placeholder="Please enter your email id" required>
                         <textarea name="Message" rows="7" placeholder="Your Mesage"></textarea>
                         <button type="submit" class="btn btn2" id="submit">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -236,6 +240,24 @@
 
 
 <script>
+
+    /* ------------JS code for about section------------- */
+    
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right= "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right ="-200px";
+    }
+
+
+    /* ------------JS code for about section------------- */
+
+
+
 
     var activate_tablinks = document.getElementsByClassName("tab-links");
     var active_tabcontent = document.getElementsByClassName("tab-content");
@@ -250,6 +272,28 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-content");
     }
+
+
+
+    /* ----------------Code of saving data into Google sheet ------------------- */
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby09q0f2tKW9br0haABugk3H1_3zyg6nOcYJNf-asDY04H0WqlQgKkdVAYCumrGXwJ_/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
 
 </script>
 
